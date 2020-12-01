@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+:root {
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: #198ff5;
+  --twitter: #1ca0f2;
+  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --youtube: #c4032a;
+  --toggle: hsl(230, 22%, 74%);
+  --dark-toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+  /* DARK THEME */
+  --dark-bg: hsl(230, 17%, 14%);
+  --dark-header: hsl(232, 19%, 15%);
+  --dark-card: hsl(228, 28%, 20%);
+  --dark-card-hover: hsl(230, 24%, 24%);
+  --dark-text: hsl(228, 34%, 66%);
+  --dark-text-white: hsl(0, 0%, 100%);
+  /* LIGH THEME */
+  --light-bg: hsl(0, 0%, 100%);
+  --light-header: hsl(225, 100%, 98%);
+  --light-card: hsl(227, 47%, 96%);
+  --light-card-hover: hsl(225, 17%, 91%);
+  --light-text-grey: hsl(229, 9%, 63%);
+  --light-text-blue: hsl(230, 17%, 14%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Inter", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-size: 1.5rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  background-color: var(--light-header);
+}
+.texto-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.texto-header p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--light-text-blue);
+}
+.toggle {
+  position: relative;
+  padding: 0 4px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+input[type="checkbox"].checkbox {
+  width: 40px;
+  height: 10px;
+  background: #555;
+  position: relative;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  vertical-align: 2px;
+  outline: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="checkbox"].checkbox:checked + label {
+  left: 30px;
+}
+input[type="checkbox"].checkbox:focus-visible {
+  outline: solid 2px white;
+}
+input[type="checkbox"].checkbox + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  left: 2px;
+  top: 6px;
+  background: #fff;
+  opacity: 0.9;
+  background-color: cyan;
+}
+.toggle-container {
+  display: flex;
+  margin: 0 auto;
+}
+.toggle-container > span {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 4px;
+  margin-right: 2px;
+}
+.toggle-container > span:last-child {
+  margin-top: 5px;
+}
+.dark-mode {
+  background-color: var(--dark-bg);
+  transition: 0.2s ease-in-out;
+}
+.dark-mode .card {
+  background-color: var(--dark-card);
+  color: var(--dark-text-white);
+  transition: 0.2s ease-in-out;
+}
+.dark-mode .card:hover {
+  background-color: var(--dark-card-hover);
+}
+.dark-mode .card h6,
+.dark-mode .card h3 {
+  color: var(--dark-text-white);
+  transition: 0.2s ease-in-out;
+}
+.dark-mode .card h5 {
+  color: var(--light-text-grey);
+  transition: 0.2s ease-in-out;
+}
+.dark-mode .card h4,
+.dark-mode .card h6 {
+  color: var(--dark-text);
+  transition: 0.2s ease-in-out;
+}
+.dark-mode nav {
+  background-color: var(--dark-header);
+  color: var(--dark-text-white);
+  transition: 0.2s ease-in-out;
+}
+.dark-mode nav p {
+  color: var(--dark-text);
+  transition: 0.2s ease-in-out;
+}
+.dark-mode h2 {
+  color: var(--dark-text-white);
+  transition: 0.2s ease-in-out;
 }
