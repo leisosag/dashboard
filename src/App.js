@@ -33,7 +33,7 @@ const App = () => {
     <div className={darkMode ? "dark-mode" : "light-mode"}>
       <nav>
         <div className="container">
-          <div className="row justify-content-between pt-3 pb-3">
+          <div className="row justify-content-between pt-2 pb-2">
             <div className="col-md-6 texto-header">
               <h1>Social Media Dashboard</h1>
               <p>Total Followers: 23,004</p>
@@ -59,9 +59,8 @@ const App = () => {
           </div>
         </div>
       </nav>
-
       <MediaCardsContainer />
-      <div className="container pt-3 pb-3">
+      <div className="container pt-2 pb-2">
         <h2>Overview - Today</h2>
       </div>
       <StatsContainer />

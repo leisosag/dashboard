@@ -13,6 +13,25 @@
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
+.facebook {
+  background-color: var(--facebook);
+}
+.twitter {
+  background-color: var(--twitter);
+}
+.instagram {
+  background-image: linear-gradient(
+    to right,
+    #fdc468,
+    #ffa263,
+    #ff806c,
+    #f9607f,
+    #df4996
+  );
+}
+.youtube {
+  background-color: var(--youtube);
+}
 .details-media h6 {
   font-size: 0.8rem;
   margin: 0.4rem;

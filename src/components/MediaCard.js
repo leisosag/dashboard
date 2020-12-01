@@ -9,10 +9,11 @@ const MediaCard = ({
   arrow,
   media,
   status,
+  line,
 }) => {
   return (
     <div className="card">
-      <div className="linea-media"></div>
+      <div className={`linea-media ${line}`}></div>
       <div className="card-body">
         <div className="details-media">
           <img src={media} alt="icon" />

@@ -8,8 +8,10 @@ import IconFacebook from "../images/icon-facebook.svg";
 import IconYoutube from "../images/icon-youtube.svg";
 
 const MediaCardsContainer = () => {
+  const lines = ["facebook", "twitter", "instagram", "youtube"];
+
   return (
-    <div className="container pt-5 pb-5">
+    <div className="container pt-4 pb-2">
       <div className="row">
         <div className="col-md-3 pb-4">
           <MediaCard
@@ -20,6 +22,7 @@ const MediaCardsContainer = () => {
             user="@nathanf"
             media={IconFacebook}
             status={true}
+            line={lines[0]}
           />
         </div>
         <div className="col-md-3 pb-4">
@@ -31,6 +34,7 @@ const MediaCardsContainer = () => {
             user="@nathanf"
             media={IconTwitter}
             status={true}
+            line={lines[1]}
           />
         </div>
         <div className="col-md-3 pb-4">
@@ -42,6 +46,7 @@ const MediaCardsContainer = () => {
             user="@realnathanf"
             media={IconInstagram}
             status={true}
+            line={lines[2]}
           />
         </div>
         <div className="col-md-3 pb-4">
@@ -53,6 +58,7 @@ const MediaCardsContainer = () => {
             user="Nathan F."
             media={IconYoutube}
             status={false}
+            line={lines[3]}
           />
         </div>
       </div>
